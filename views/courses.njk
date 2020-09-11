@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <h1>Cursos</h1>
+    </div>
+
+    <section class="cards">
+
+        {% for item in items %}
+
+            <div class="card" id="{{item.id}}">
+                <div class="card-container">
+                    <img src="/assets/{{item.id}}.svg" alt="imagem de {{item.id}}">
+                </div>
+                <div class="card-content">
+                    <p>Qtd de modulos</p>
+                    <p>{{item.qtd}}</p>
+                </div>
+                <div class="card-info">
+                    <p>Preço</p>
+                    <p>{{item.price}}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <span class="material-icons">
+                    close
+                </span>
+            </a>
+            <a class="maximize-modal">
+                <span class="material-icons">
+                    aspect_ratio
+                </span>
+            </a>
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+
+{% endblock content %}
