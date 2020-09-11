@@ -22,6 +22,23 @@ server
         return res.render("courses", { items: cursos })
     })
 
+    .get("/courses/:id", function (req, res) {
+
+        const id = req.params.id;
+
+        const curso = cursos.find(function (curso) {
+            if (curso.id == id) {
+                return true
+            }
+        })
+
+        if (!curso) {
+            return res.send("Video not Found!")
+        }
+
+        return res.render("course", { item: curso })
+    })
+
     .get("/about", function (req, res) {
         return res.render('about')
     })
