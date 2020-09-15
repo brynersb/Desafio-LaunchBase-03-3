@@ -18,6 +18,10 @@ nunjucks.configure("views", {
 
 server
     .get("/", function (req, res) {
+        return res.redirect("/courses")
+    })
+
+    .get("/courses", function (req, res) {
 
         return res.render("courses", { items: cursos })
     })

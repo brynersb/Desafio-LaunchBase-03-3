@@ -49,6 +49,8 @@ header nav a+a {
 
 #wrapper h1 {
     font-size: 32px;
+    padding-top: 4vh;
+    padding-bottom: 2vh ;
 }
 
 #wrapper img {
@@ -228,6 +230,15 @@ footer a:hover {
     margin: 0;
 }
 
+.modal .flip-page{
+    color: white;
+    position: absolute;
+    right: 73px;
+    top: 5px;
+    cursor: pointer;
+
+}
+
 /* ==## Modal ativo ##== */
 
 .modal-overlay.active {
@@ -239,5 +250,5 @@ footer a:hover {
     width: 100%;
     height: 95%;
     position: absolute;
-    top: 6%;
+    top:48%;
 }
